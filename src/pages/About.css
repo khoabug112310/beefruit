@@ -1,0 +1,359 @@
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, var(--primary-green-dark), var(--primary-green));
+  padding: 80px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.page-header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.page-header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.intro-content h2 {
+  font-size: 32px;
+  color: var(--primary-green);
+  margin-bottom: 25px;
+}
+
+.intro-content p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.intro-content strong {
+  color: var(--primary-green);
+}
+
+.intro-image .image-box {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(135deg, var(--accent-green), var(--primary-green-light));
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-hover);
+}
+
+.intro-image .image-box span {
+  font-size: 100px;
+}
+
+.intro-image .image-box p {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* History Section */
+.history-section {
+  padding: 80px 0;
+  background-color: var(--light-gray);
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--primary-green);
+}
+
+.timeline-item {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-marker {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 24px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.timeline-content {
+  background-color: var(--white);
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  flex: 1;
+}
+
+.timeline-content h3 {
+  color: var(--primary-green);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.timeline-content p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Capabilities Section */
+.capabilities-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.capability-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.check-icon {
+  color: var(--primary-green);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.capability-item span {
+  color: var(--text-dark);
+  font-size: 16px;
+}
+
+.capabilities-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-box {
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  color: var(--white);
+}
+
+.stat-box .stat-number {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.stat-box .stat-label {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Factories Section */
+.factories-section {
+  padding: 80px 0;
+  background-color: var(--light-gray);
+}
+
+.factories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.factory-card {
+  background-color: var(--white);
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.factory-card:hover {
+  transform: translateY(-10px);
+}
+
+.factory-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.factory-card h3 {
+  color: var(--primary-green);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.factory-card p {
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.location-icon {
+  color: var(--primary-green);
+  margin-right: 5px;
+}
+
+/* Markets Section */
+.markets-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.world-map {
+  margin-bottom: 40px;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-placeholder span {
+  font-size: 100px;
+}
+
+.map-placeholder p {
+  color: var(--primary-green);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.markets-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.market-badge {
+  background-color: var(--primary-green);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Certifications Section */
+.certifications-section {
+  padding: 80px 0;
+  background-color: var(--light-gray);
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cert-card {
+  background-color: var(--white);
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.cert-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.cert-card h3 {
+  color: var(--primary-green);
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.cert-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .factories-grid,
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header h1 {
+    font-size: 32px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-marker {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .factories-grid,
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-content {
+    padding: 20px;
+  }
+}
