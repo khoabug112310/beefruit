@@ -1,0 +1,90 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "gallery": "Gallery",
+    "news": "News",
+    "blog": "Blog",
+    "contact": "Contact",
+    "recruitment": "Careers",
+    "search": "Search..."
+  },
+  "home": {
+    "hero": {
+      "title": "Building Trust in Fruits - Premium Quality Import",
+      "subtitle": "BeeFruit - Thuduc House Food Company - Over 25 years of experience in international fruit import/transportation",
+      "viewProducts": "View Products",
+      "contactNow": "Contact Now"
+    },
+    "about": {
+      "title": "Quality is the Foundation",
+      "description1": "With the motto \"Building trust to help Vietnamese fruits reach far\", BeeFruit is committed to bringing the freshest and most delicious fruits, meeting international standards, contributing to bringing Vietnamese agricultural products to the world.",
+      "description2": "We constantly strive to improve production processes and enhance product quality to meet the strict requirements of demanding markets such as USA, Japan, Australia, Europe...",
+      "learnMore": "Learn More",
+      "imagePlaceholder": "Vietnamese Fruits"
+    },
+    "values": {
+      "title": "Values & Mission",
+      "subtitle": "Official imported fruits \"Trust - Quality - Best Price\"",
+      "fresh": {
+        "title": "Fresh & Guaranteed",
+        "desc": "Carefully selected fruits, ensuring freshness"
+      },
+      "process": {
+        "title": "Strict Process",
+        "desc": "Complying with international food safety standards"
+      },
+      "certification": {
+        "title": "International Certifications",
+        "desc": "HACCP, FSSC 22000, Halal"
+      }
+    },
+    "products": {
+      "title": "Featured Products",
+      "subtitle": "Fresh and frozen fruits for export quality",
+      "viewAll": "View All Products",
+      "items": {
+        "orange": { "name": "Orange", "desc": "Premium imported fresh oranges" },
+        "apple": { "name": "Apple", "desc": "High quality imported apples" },
+        "grape": { "name": "Grape", "desc": "Fresh and crispy grapes" },
+        "cherry": { "name": "Cherry", "desc": "Fresh imported cherries" },
+        "mandarin": { "name": "Mandarin", "desc": "Sweet imported mandarins" },
+        "kiwi": { "name": "Kiwi", "desc": "Green imported kiwi" }
+      }
+    },
+    "stats": {
+      "coldStorage": { "number": "-20", "unit": "°C", "label": "Cold Storage System" },
+      "capacity": { "number": "3000", "unit": "tons/year", "label": "Import Capacity" },
+      "experience": { "number": "+5", "unit": "years", "label": "Experience" },
+      "countries": { "number": "+20", "unit": "countries", "label": "Import From" }
+    },
+    "news": {
+      "title": "Latest News",
+      "subtitle": "Stay updated with the latest from BeeFruit",
+      "readMore": "Read More →"
+    },
+    "cta": {
+      "title": "Interested in our products?",
+      "subtitle": "Contact us now for consultation and best pricing",
+      "button": "Contact Now"
+    }
+  },
+  "footer": {
+    "company": "BeeFruit Co., Ltd",
+    "slogan": "Building trust to help Vietnamese fruits reach far",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "social": "Social Media",
+    "copyright": "© 2026 BeeFruit. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  }
+}

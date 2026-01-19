@@ -1,0 +1,90 @@
+{
+  "header": {
+    "home": "Trang chủ",
+    "about": "Về chúng tôi",
+    "products": "Sản phẩm",
+    "gallery": "Gallery",
+    "news": "Tin tức",
+    "blog": "Blog",
+    "contact": "Liên hệ",
+    "recruitment": "Tuyển dụng",
+    "search": "Tìm kiếm..."
+  },
+  "home": {
+    "hero": {
+      "title": "Xây dựng niềm tin trái cây - Nhập khẩu chính ngạch chất lượng nhất",
+      "subtitle": "BeeFruit - Công ty Thực phẩm Thuduc House - Hơn 25 năm kinh nghiệm nhập khẩu/vận chuyển trái cây Quốc tế",
+      "viewProducts": "Xem sản phẩm",
+      "contactNow": "Liên hệ ngay"
+    },
+    "about": {
+      "title": "Chất lượng là nền tảng",
+      "description1": "Với phương châm \"Xây dựng niềm tin để trái cây Việt vươn xa\", BeeFruit cam kết mang đến những sản phẩm trái cây tươi ngon nhất, đạt tiêu chuẩn quốc tế, góp phần đưa nông sản Việt Nam vươn tầm thế giới.",
+      "description2": "Chúng tôi không ngừng nỗ lực cải tiến quy trình sản xuất, nâng cao chất lượng sản phẩm để đáp ứng yêu cầu khắt khe của các thị trường khó tính như Mỹ, Nhật Bản, Úc, Châu Âu...",
+      "learnMore": "Tìm hiểu thêm",
+      "imagePlaceholder": "Trái cây Việt Nam"
+    },
+    "values": {
+      "title": "Giá trị & Sứ mệnh",
+      "subtitle": "Trái cây nhập khẩu chính ngạch \"Uy tín - Chất lượng - Giá tốt\"",
+      "fresh": {
+        "title": "Tươi sạch & Đảm bảo",
+        "desc": "Trái cây được chọn lọc kỹ lưỡng, đảm bảo tươi ngon"
+      },
+      "process": {
+        "title": "Quy trình nghiêm ngặt",
+        "desc": "Tuân thủ các tiêu chuẩn quốc tế về an toàn thực phẩm"
+      },
+      "certification": {
+        "title": "Chứng nhận quốc tế",
+        "desc": "HACCP, FSSC 22000, Halal"
+      }
+    },
+    "products": {
+      "title": "Sản phẩm nổi bật",
+      "subtitle": "Trái cây tươi và đông lạnh chất lượng xuất khẩu",
+      "viewAll": "Xem tất cả sản phẩm",
+      "items": {
+        "orange": { "name": "Cam", "desc": "Cam tươi loại 1 nhập khẩu" },
+        "apple": { "name": "Táo", "desc": "Táo nhập khẩu chất lượng cao" },
+        "grape": { "name": "Nho", "desc": "Nho tươi ngon giòn ngọt" },
+        "cherry": { "name": "Cherry", "desc": "Cherry nhập khẩu tươi ngon" },
+        "mandarin": { "name": "Quýt", "desc": "Quýt nhập khẩu ngọt thanh" },
+        "kiwi": { "name": "Kiwi", "desc": "Kiwi xanh nhập khẩu" }
+      }
+    },
+    "stats": {
+      "coldStorage": { "number": "-20", "unit": "độ C", "label": "Hệ thống kho lạnh" },
+      "capacity": { "number": "3000", "unit": "tấn/năm", "label": "Sản lượng nhập khẩu" },
+      "experience": { "number": "+5", "unit": "năm", "label": "Kinh nghiệm" },
+      "countries": { "number": "+20", "unit": "quốc gia", "label": "Nhập khẩu" }
+    },
+    "news": {
+      "title": "Tin tức mới nhất",
+      "subtitle": "Cập nhật thông tin mới nhất từ BeeFruit",
+      "readMore": "Đọc thêm →"
+    },
+    "cta": {
+      "title": "Bạn quan tâm đến sản phẩm của chúng tôi?",
+      "subtitle": "Liên hệ ngay để được tư vấn và báo giá tốt nhất",
+      "button": "Liên hệ ngay"
+    }
+  },
+  "footer": {
+    "company": "Công ty TNHH BeeFruit",
+    "slogan": "Xây dựng niềm tin để trái cây Việt vươn xa",
+    "quickLinks": "Liên kết nhanh",
+    "contact": "Liên hệ",
+    "address": "Địa chỉ",
+    "phone": "Điện thoại",
+    "email": "Email",
+    "social": "Mạng xã hội",
+    "copyright": "© 2026 BeeFruit. Bảo lưu mọi quyền."
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Có lỗi xảy ra",
+    "submit": "Gửi",
+    "cancel": "Hủy"
+  }
+}

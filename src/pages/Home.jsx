@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
 import { FaCheckCircle, FaGlobeAmericas, FaIndustry, FaAward, FaClock, FaLeaf, FaShieldAlt } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 import './Home.css'
 
 const Home = () => {
+  const { t } = useTranslation()
+
   const heroBanners = [
     '/Hero-Banner/hinh1.jpg',
     '/Hero-Banner/hinh2.jpg',
@@ -12,25 +15,25 @@ const Home = () => {
   ]
 
   const products = [
-    { id: 1, name: 'Cam', image: '/Cam - quýt/cam1.jpeg', description: 'Cam tươi loại 1 nhập khẩu' },
-    { id: 2, name: 'Táo', image: '/Táo/z7438178316312_03d8b9ab39076388805b664cd96de801.jpg', description: 'Táo nhập khẩu chất lượng cao' },
-    { id: 3, name: 'Nho', image: '/Nho/IMG_1490.jpeg', description: 'Nho tươi ngon giòn ngọt' },
-    { id: 4, name: 'Cherry', image: '/Cherry/IMG_1107.jpeg', description: 'Cherry nhập khẩu tươi ngon' },
-    { id: 5, name: 'Quýt', image: '/Cam - quýt/quyt2.jpg', description: 'Quýt nhập khẩu ngọt thanh' },
-    { id: 6, name: 'Kiwi', image: '/Kiwi/z7430806126264_e6b6c2b78d7197d16eac7da585476528.jpg', description: 'Kiwi xanh nhập khẩu' },
+    { id: 1, key: 'orange', image: '/Cam - quýt/cam1.jpeg' },
+    { id: 2, key: 'apple', image: '/Táo/z7438178316312_03d8b9ab39076388805b664cd96de801.jpg' },
+    { id: 3, key: 'grape', image: '/Nho/IMG_1490.jpeg' },
+    { id: 4, key: 'cherry', image: '/Cherry/IMG_1107.jpeg' },
+    { id: 5, key: 'mandarin', image: '/Cam - quýt/quyt2.jpg' },
+    { id: 6, key: 'kiwi', image: '/Kiwi/z7430806126264_e6b6c2b78d7197d16eac7da585476528.jpg' },
   ]
 
   const stats = [
-    { icon: <FaIndustry />, number: '-20', unit: 'độ C', label: 'Hệ thống kho lạnh' },
-    { icon: <FaLeaf />, number: '3000', unit: 'tấn/năm', label: 'Sản lượng nhập khẩu' },
-    { icon: <FaClock />, number: '+5', unit: 'năm', label: 'Kinh nghiệm' },
-    { icon: <FaGlobeAmericas />, number: '+20', unit: 'quốc gia', label: 'Nhập khẩu' },
+    { icon: <FaIndustry />, key: 'coldStorage' },
+    { icon: <FaLeaf />, key: 'capacity' },
+    { icon: <FaClock />, key: 'experience' },
+    { icon: <FaGlobeAmericas />, key: 'countries' },
   ]
 
   const values = [
-    { icon: <FaLeaf />, title: 'Tươi sạch & Đảm bảo', desc: 'Trái cây được chọn lọc kỹ lưỡng, đảm bảo tươi ngon' },
-    { icon: <FaShieldAlt />, title: 'Quy trình nghiêm ngặt', desc: 'Tuân thủ các tiêu chuẩn quốc tế về an toàn thực phẩm' },
-    { icon: <FaAward />, title: 'Chứng nhận quốc tế', desc: 'HACCP, FSSC 22000, Halal' },
+    { icon: <FaLeaf />, key: 'fresh' },
+    { icon: <FaShieldAlt />, key: 'process' },
+    { icon: <FaAward />, key: 'certification' },
   ]
 
   const news = [
@@ -55,14 +58,11 @@ const Home = () => {
         </div>
         <div className="hero-overlay"></div>
         <div className="container hero-content">
-          <h1 className="hero-title">Xây dựng niềm tin trái cây - Nhập khẩu chính ngạch chất lượng nhất</h1>
-          <p className="hero-subtitle">
-            BeeFruit - Công ty Thực phẩm Thuduc House - 
-            Hơn 25 năm kinh nghiệm nhập khẩu/vận chuyển trái cây Quốc tế
-          </p>
+          <h1 className="hero-title">{t('home.hero.title')}</h1>
+          <p className="hero-subtitle">{t('home.hero.subtitle')}</p>
           <div className="hero-buttons">
-            <Link to="/products" className="btn btn-primary">Xem sản phẩm</Link>
-            <Link to="/contact" className="btn btn-secondary">Liên hệ ngay</Link>
+            <Link to="/products" className="btn btn-primary">{t('home.hero.viewProducts')}</Link>
+            <Link to="/contact" className="btn btn-secondary">{t('home.hero.contactNow')}</Link>
           </div>
         </div>
       </section>
@@ -72,23 +72,15 @@ const Home = () => {
         <div className="container">
           <div className="about-content">
             <div className="about-text">
-              <h2>Chất lượng là nền tảng</h2>
-              <p>
-                Với phương châm "Xây dựng niềm tin để trái cây Việt vươn xa", BeeFruit 
-                cam kết mang đến những sản phẩm trái cây tươi ngon nhất, đạt tiêu chuẩn 
-                quốc tế, góp phần đưa nông sản Việt Nam vươn tầm thế giới.
-              </p>
-              <p>
-                Chúng tôi không ngừng nỗ lực cải tiến quy trình sản xuất, nâng cao chất 
-                lượng sản phẩm để đáp ứng yêu cầu khắt khe của các thị trường khó tính 
-                như Mỹ, Nhật Bản, Úc, Châu Âu...
-              </p>
-              <Link to="/about" className="btn btn-primary">Tìm hiểu thêm</Link>
+              <h2>{t('home.about.title')}</h2>
+              <p>{t('home.about.description1')}</p>
+              <p>{t('home.about.description2')}</p>
+              <Link to="/about" className="btn btn-primary">{t('home.about.learnMore')}</Link>
             </div>
             <div className="about-image">
               <div className="image-placeholder">
                 <span>🍃</span>
-                <p>Trái cây Việt Nam</p>
+                <p>{t('home.about.imagePlaceholder')}</p>
               </div>
             </div>
           </div>
@@ -99,15 +91,15 @@ const Home = () => {
       <section className="values-section">
         <div className="container">
           <div className="section-title">
-            <h2>Giá trị & Sứ mệnh</h2>
-            <p>Trái cây nhập khẩu chính ngạch "Uy tín - Chất lượng - Giá tốt"</p>
+            <h2>{t('home.values.title')}</h2>
+            <p>{t('home.values.subtitle')}</p>
           </div>
           <div className="values-grid">
             {values.map((value, index) => (
               <div key={index} className="value-card">
                 <div className="value-icon">{value.icon}</div>
-                <h3>{value.title}</h3>
-                <p>{value.desc}</p>
+                <h3>{t(`home.values.${value.key}.title`)}</h3>
+                <p>{t(`home.values.${value.key}.desc`)}</p>
               </div>
             ))}
           </div>
@@ -123,24 +115,24 @@ const Home = () => {
       <section className="products-section">
         <div className="container">
           <div className="section-title">
-            <h2>Sản phẩm nổi bật</h2>
-            <p>Trái cây tươi và đông lạnh chất lượng xuất khẩu</p>
+            <h2>{t('home.products.title')}</h2>
+            <p>{t('home.products.subtitle')}</p>
           </div>
           <div className="products-grid">
             {products.map((product) => (
               <div key={product.id} className="product-card">
                 <div className="product-image">
-                  <img src={product.image} alt={product.name} />
+                  <img src={product.image} alt={t(`home.products.items.${product.key}.name`)} />
                 </div>
                 <div className="product-info">
-                  <h3>{product.name}</h3>
-                  <p>{product.description}</p>
+                  <h3>{t(`home.products.items.${product.key}.name`)}</h3>
+                  <p>{t(`home.products.items.${product.key}.desc`)}</p>
                 </div>
               </div>
             ))}
           </div>
           <div className="products-cta">
-            <Link to="/products" className="btn btn-primary">Xem tất cả sản phẩm</Link>
+            <Link to="/products" className="btn btn-primary">{t('home.products.viewAll')}</Link>
           </div>
         </div>
       </section>
@@ -153,9 +145,10 @@ const Home = () => {
               <div key={index} className="stat-item">
                 <div className="stat-icon">{stat.icon}</div>
                 <div className="stat-number">
-                  {stat.number}<span className="stat-unit">{stat.unit}</span>
+                  {t(`home.stats.${stat.key}.number`)}
+                  <span className="stat-unit">{t(`home.stats.${stat.key}.unit`)}</span>
                 </div>
-                <div className="stat-label">{stat.label}</div>
+                <div className="stat-label">{t(`home.stats.${stat.key}.label`)}</div>
               </div>
             ))}
           </div>
@@ -166,8 +159,8 @@ const Home = () => {
       <section className="news-section">
         <div className="container">
           <div className="section-title">
-            <h2>Tin tức mới nhất</h2>
-            <p>Cập nhật thông tin mới nhất từ BeeFruit</p>
+            <h2>{t('home.news.title')}</h2>
+            <p>{t('home.news.subtitle')}</p>
           </div>
           <div className="news-grid">
             {news.map((item) => (
@@ -178,7 +171,7 @@ const Home = () => {
                 <div className="news-content">
                   <span className="news-date">{item.date}</span>
                   <h3>{item.title}</h3>
-                  <Link to="/news" className="news-link">Đọc thêm →</Link>
+                  <Link to="/news" className="news-link">{t('home.news.readMore')}</Link>
                 </div>
               </div>
             ))}
@@ -190,9 +183,9 @@ const Home = () => {
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>Bạn quan tâm đến sản phẩm của chúng tôi?</h2>
-            <p>Liên hệ ngay để được tư vấn và báo giá tốt nhất</p>
-            <Link to="/contact" className="btn btn-primary">Liên hệ ngay</Link>
+            <h2>{t('home.cta.title')}</h2>
+            <p>{t('home.cta.subtitle')}</p>
+            <Link to="/contact" className="btn btn-primary">{t('home.cta.button')}</Link>
           </div>
         </div>
       </section>
