@@ -3,17 +3,27 @@ import { FaCheckCircle, FaGlobeAmericas, FaIndustry, FaAward, FaClock, FaLeaf, F
 import './Home.css'
 
 const Home = () => {
+  const heroBanners = [
+    '/Hero-Banner/hinh1.jpg',
+    '/Hero-Banner/hinh2.jpg',
+    '/Hero-Banner/hinh3.jpg',
+    '/Hero-Banner/hinh4.jpg',
+    '/Hero-Banner/hinh5.jpg',
+  ]
+
   const products = [
-    { id: 1, name: 'Sầu Riêng', image: '🥭', description: 'Sầu riêng Việt Nam chất lượng cao' },
-    { id: 2, name: 'Xoài', image: '🥭', description: 'Xoài ngọt thơm đặc sản' },
-    { id: 3, name: 'Bưởi Da Xanh', image: '🍊', description: 'Bưởi da xanh tươi ngon' },
-    { id: 4, name: 'Nhãn', image: '🫐', description: 'Nhãn lồng xuất khẩu' },
+    { id: 1, name: 'Cam', image: '/Cam - quýt/cam1.jpeg', description: 'Cam tươi loại 1 nhập khẩu' },
+    { id: 2, name: 'Táo', image: '/Táo/z7438178316312_03d8b9ab39076388805b664cd96de801.jpg', description: 'Táo nhập khẩu chất lượng cao' },
+    { id: 3, name: 'Nho', image: '/Nho/IMG_1490.jpeg', description: 'Nho tươi ngon giòn ngọt' },
+    { id: 4, name: 'Cherry', image: '/Cherry/IMG_1107.jpeg', description: 'Cherry nhập khẩu tươi ngon' },
+    { id: 5, name: 'Quýt', image: '/Cam - quýt/quyt2.jpg', description: 'Quýt nhập khẩu ngọt thanh' },
+    { id: 6, name: 'Kiwi', image: '/Kiwi/z7430806126264_e6b6c2b78d7197d16eac7da585476528.jpg', description: 'Kiwi xanh nhập khẩu' },
   ]
 
   const stats = [
-    { icon: <FaIndustry />, number: '120.000', unit: 'm²', label: 'Nhà máy đóng gói' },
-    { icon: <FaLeaf />, number: '+200.000', unit: 'tấn/năm', label: 'Sản lượng' },
-    { icon: <FaClock />, number: '+25', unit: 'năm', label: 'Kinh nghiệm' },
+    { icon: <FaIndustry />, number: '-20', unit: 'độ C', label: 'Hệ thống kho lạnh' },
+    { icon: <FaLeaf />, number: '3000', unit: 'tấn/năm', label: 'Sản lượng nhập khẩu' },
+    { icon: <FaClock />, number: '+5', unit: 'năm', label: 'Kinh nghiệm' },
     { icon: <FaGlobeAmericas />, number: '+20', unit: 'quốc gia', label: 'Nhập khẩu' },
   ]
 
@@ -33,12 +43,22 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Banner */}
       <section className="hero">
+        <div className="hero-slider">
+          <div className="hero-slider-track">
+            {/* Duplicate images for seamless loop */}
+            {[...heroBanners, ...heroBanners].map((img, index) => (
+              <div key={index} className="hero-slide">
+                <img src={img} alt={`Banner ${(index % heroBanners.length) + 1}`} />
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="hero-overlay"></div>
         <div className="container hero-content">
-          <h1 className="hero-title">Xây dựng niềm tin để trái cây Việt vươn xa</h1>
+          <h1 className="hero-title">Xây dựng niềm tin trái cây - Nhập khẩu chính ngạch chất lượng nhất</h1>
           <p className="hero-subtitle">
-            BeeFruit - Công ty Thực phẩm Thủ Đức House - 
-            Hơn 25 năm kinh nghiệm xuất khẩu trái cây Việt Nam ra thế giới
+            BeeFruit - Công ty Thực phẩm Thuduc House - 
+            Hơn 25 năm kinh nghiệm nhập khẩu/vận chuyển trái cây Quốc tế
           </p>
           <div className="hero-buttons">
             <Link to="/products" className="btn btn-primary">Xem sản phẩm</Link>
@@ -80,7 +100,7 @@ const Home = () => {
         <div className="container">
           <div className="section-title">
             <h2>Giá trị & Sứ mệnh</h2>
-            <p>Cam kết mang đến những sản phẩm chất lượng nhất</p>
+            <p>Trái cây nhập khẩu chính ngạch "Uy tín - Chất lượng - Giá tốt"</p>
           </div>
           <div className="values-grid">
             {values.map((value, index) => (
@@ -110,7 +130,7 @@ const Home = () => {
             {products.map((product) => (
               <div key={product.id} className="product-card">
                 <div className="product-image">
-                  <span className="product-emoji">{product.image}</span>
+                  <img src={product.image} alt={product.name} />
                 </div>
                 <div className="product-info">
                   <h3>{product.name}</h3>

@@ -2,21 +2,51 @@
 .hero {
   position: relative;
   height: 600px;
-  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 50%, #4CAF50 100%);
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
-.hero::before {
-  content: '';
+/* Hero Slider */
+.hero-slider {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
-  background-size: 200px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slider-track {
+  display: flex;
+  height: 100%;
+  width: calc(100vw * 10); /* 5 hình gốc + 5 hình duplicate */
+  animation: slideLeft 150s linear infinite;
+}
+
+.hero-slide {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 100%;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw * 5)); /* Dịch qua 5 hình */
+  }
+}
+
+.hero-slider-track:hover {
+  animation-play-state: paused;
 }
 
 .hero-overlay {
@@ -25,12 +55,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
   color: var(--white);
 }
@@ -212,11 +243,23 @@
 }
 
 .product-image {
-  height: 200px;
+  height: 300px;
   background: linear-gradient(135deg, #FFF8E1, #FFECB3);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
 }
 
 .product-emoji {
@@ -224,7 +267,7 @@
 }
 
 .product-info {
-  padding: 20px;
+  padding: 5px;
   text-align: center;
 }
 
